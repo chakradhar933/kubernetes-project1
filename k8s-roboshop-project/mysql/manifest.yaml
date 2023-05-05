@@ -14,7 +14,7 @@ metadata:
 type: Opaque
 data:
   MYSQL_USER: c2hpcHBpbmc=
-  MYSQL_PASSWORD: c2NyZXQ=
+  MYSQL_PASSWORD: c2VjcmV0
 ---
 apiVersion: v1
 kind: Pod
@@ -46,5 +46,5 @@ spec:
     tier: db
   ports:
     - protocol: TCP
-      port: 80
+      port: 3306
       targetPort: 3306
