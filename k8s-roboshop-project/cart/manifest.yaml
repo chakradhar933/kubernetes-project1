@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: catalogue-config
+  name: cart-config
 data:
   CATALOGUE_HOST: "http://catalogue"
   REDIS_HOST: "redis"
@@ -18,10 +18,10 @@ spec:
   containers:
   - name: cart
     imagePullPolicy: Always
-    image: chakradhar933/cart:k8s
+    image: chakradhar933/cart:k8s-1
     envFrom:
     - configMapRef:
-        name: catalogue-config
+        name: cart-config
     resources:
       requests:
         cpu: "100m"
