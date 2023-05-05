@@ -18,7 +18,7 @@ spec:
   containers:
   - name: cart
     imagePullPolicy: Always
-    image: chakradhar933/cart:v1
+    image: chakradhar933/cart:k8s
     envFrom:
     - configMapRef:
         name: catalogue-config
